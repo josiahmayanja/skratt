@@ -1,6 +1,10 @@
+import { useLanguage } from "./languageContext";
+
 export default function Home() {
+  //const { language } = useLanguage();
+
   return (
-    <div className="bg-customLightLightYellow p-4">
+    <div className=" h-full bg-customLightLightYellow p-4">
       {/* Main Header */}
       <div className="flex">
         <h1 className="text-5xl font-sans font-bold text-customLightBlue mt-5 mb-5">
@@ -54,8 +58,8 @@ export default function Home() {
           Förfina din svenska som ett proffs.
         </h1>
 
-        <div className="flex">
-          <div className="bg-customLighLightGreen font-sans p-2 rounded-md ml-5 border-4 border-customDarkGreen">
+        <div className="flex m-0.3">
+          <div className="bg-customLighLightGreen font-sans p-2f rounded-md ml-5 border-4 border-customDarkGreen">
           <h2 className="font-bold text-black-700 underline text-center">After Skrätt:</h2>
           <p>Improves word choice for a natural, professional expression</p>
           </div>
@@ -81,15 +85,8 @@ export default function Home() {
 
       {/* Start Writing Button */}
       <button className="bg-customDarkGreen font-sans text-white py-3 px-6 rounded-md text-xl font-bold mb-8 hover:bg-green-700 transition-colors duration-200 shadow-md">
-        Start Writing in Swedish
+       {/*language === "EN" ? "Start Writing in Swedish" : "Börja skriva på svenska"*/}
       </button>
-
-      {/* Language Toggle */}
-      <div className="flex justify-end space-x-2 text-gray-600 text-lg">
-        <span>EN</span>
-        <span>|</span>
-        <span>SV</span>
-      </div>
     </div>
   );
 }
